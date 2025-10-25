@@ -345,19 +345,23 @@ When extracted, the folder structure looks like this 👇
 └── 🧩 sample_data/
 ```
 
-🔐 Setting Up the API Key
+## 🔐 Setting Up the API Key
 
-Inside the file
+To activate Gemini functionality, update your environment configuration:
 
-/content/.env.local
+**File Path:**  
+`/content/.env.local`
 
-you’ll find this line:
-
+**Original Line:**
+```env
 GEMINI_API_KEY=PLACEHOLDER_API_KEY
+```
 
-Replace it with your actual Gemini API key:
-
+**Replace with your actual Gemini API key:**
+```env
 GEMINI_API_KEY=your_real_google_gemini_api_key_here
+```
+
 
 ```
 ┌───────────────────────────┐
