@@ -232,6 +232,132 @@ Changing one 🔄 automatically updates all others 🔁 — a self-referential s
 
 
 # 🌌🤖 AI Text Toolkit – System Architecture Overview
+All of the following files and folders are contained inside a single compressed archive:
+
+📦 ai-text-toolkit.zip
+
+
+When extracted, the folder structure looks like this 👇
+# 🌐 AI Text Toolkit — Repository Structure
+
+```
+📦 /content  
+│  
+├── 📄 index.tsx  
+├── 📄 tsconfig.json  
+├── 📦 ai-text-toolkit.zip  
+├── 🔐 .env.local  
+├── 📄 types.ts  
+├── ⚙️ vite.config.ts  
+├── 🚫 .gitignore  
+├── 📊 metadata.json  
+├── 📦 package.json  
+├── 📘 README.md  
+├── 📄 constants.ts  
+├── 🌐 index.html  
+├── 💻 App.tsx  
+│  
+├── 📁 .config/  
+│   ├── 🧭 config_sentinel  
+│   ├── 💾 default_configs.db  
+│   ├── 🗃️ .last_opt_in_prompt.yaml  
+│   ├── 💠 hidden_gcloud_config_universe_descriptor_data_cache_configs.db  
+│   ├── ⚙️ active_config  
+│   ├── 📋 .last_survey_prompt.yaml  
+│   ├── ☁️ gce  
+│   ├── 🕐 .last_update_check.json  
+│   ├── 📂 logs/  
+│   │   └── 🗓️ 2025.10.23/  
+│   │       ├── 🪵 13.39.21.114612.log  
+│   │       ├── 🪵 13.39.50.340808.log  
+│   │       ├── 🪵 13.39.59.273093.log  
+│   │       ├── 🪵 13.40.06.607625.log  
+│   │       ├── 🪵 13.40.15.242386.log  
+│   │       └── 🪵 13.40.15.966501.log  
+│   │  
+│   └── ⚙️ configurations/  
+│       └── 🧩 config_default  
+│  
+├── 💡 services/  
+│   └── 🤖 geminiService.ts  
+│  
+├── 🧠 components/  
+│   ├── 💬 Tooltip.tsx  
+│   ├── 🎚️ ToneSelector.tsx  
+│   ├── 🧭 ProactiveAssistant.tsx  
+│   ├── 🌍 LanguageSelector.tsx  
+│   ├── 💡 InnovationFormatSelector.tsx  
+│   ├── 👁️ PerspectiveDisplay.tsx  
+│   ├── 🔌 ApiSelector.tsx  
+│   ├── 🖥️ OutputDisplay.tsx  
+│   ├── 🚀 JourneyDisplay.tsx  
+│   ├── 🔑 ApiKeyModal.tsx  
+│   ├── 🖼️ ImageUploader.tsx  
+│   ├── 🔮 FutureInsight.tsx  
+│   ├── 🧩 Sidebar.tsx  
+│   ├── 💭 InnovationDisplay.tsx  
+│   ├── 🧠 ExamplePrompts.tsx  
+│   ├── 📊 VisualizationDisplay.tsx  
+│   ├── 🕰️ HistoryPanel.tsx  
+│   ├── 🧬 CognitiveTwinDisplay.tsx  
+│   ├── 🎙️ VoiceInputControl.tsx  
+│   ├── 💫 CognitiveStateMonitor.tsx  
+│   ├── 🪄 PreCognitiveAssistant.tsx  
+│   └── 🗂️ icons/  
+│       ├── ❓ QuestionMarkCircleIcon.tsx  
+│       ├── 🧠 BrainCircuitIcon.tsx  
+│       ├── ❌ XMarkIcon.tsx  
+│       ├── 📝 ProofreadIcon.tsx  
+│       ├── ✍️ RewriteIcon.tsx  
+│       ├── 📋 ClipboardIcon.tsx  
+│       ├── ⚡ CognitiveStateIcon.tsx  
+│       ├── 💬 PromptIcon.tsx  
+│       ├── 🧾 SummarizeIcon.tsx  
+│       ├── 🔮 FutureIcon.tsx  
+│       ├── 🌟 FutureSelfIcon.tsx  
+│       ├── 💡 InnovateIcon.tsx  
+│       ├── 🧍‍♂️ TwinIcon.tsx  
+│       ├── ✏️ WriteIcon.tsx  
+│       ├── 🚫 MinusCircleIcon.tsx  
+│       ├── 🕰️ HistoryIcon.tsx  
+│       ├── 👽 AlienIcon.tsx  
+│       ├── 💡 LightBulbIcon.tsx  
+│       ├── 📊 VisualizeIcon.tsx  
+│       ├── 🌱 BeginnerIcon.tsx  
+│       ├── ✅ CheckIcon.tsx  
+│       ├── ⭕ XCircleIcon.tsx  
+│       ├── 👁️ PerspectiveIcon.tsx  
+│       ├── ➡️ ChevronRightIcon.tsx  
+│       ├── 📄 DocumentTextIcon.tsx  
+│       ├── 🔑 KeyIcon.tsx  
+│       ├── ✨ SparklesIcon.tsx  
+│       ├── ⬆️ UploadIcon.tsx  
+│       ├── ⏪ ChevronDoubleLeftIcon.tsx  
+│       ├── 🪄 MagicWandIcon.tsx  
+│       ├── 🧭 JourneyIcon.tsx  
+│       ├── 🌐 TranslateIcon.tsx  
+│       ├── ⚗️ BeakerIcon.tsx  
+│       ├── ❓ AskIcon.tsx  
+│       ├── ⚠️ ExclamationTriangleIcon.tsx  
+│       ├── 🧑‍🏫 ExpertIcon.tsx  
+│       └── 🎤 MicrophoneIcon.tsx  
+│  
+└── 🧩 sample_data/
+```
+
+🔐 Setting Up the API Key
+
+Inside the file
+
+/content/.env.local
+
+you’ll find this line:
+
+GEMINI_API_KEY=PLACEHOLDER_API_KEY
+
+Replace it with your actual Gemini API key:
+
+GEMINI_API_KEY=your_real_google_gemini_api_key_here
 
 ```
 ┌───────────────────────────┐
